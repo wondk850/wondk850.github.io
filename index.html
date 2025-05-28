@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김영로 영어 문맥 순해 - 영어 독해의 새로운 접근</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-gray-900">김영로 영어 문맥 순해</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="nav-link">홈</a>
+                        <a href="about.html" class="nav-link">학습법</a>
+                        <div class="relative dropdown">
+                            <button class="nav-link dropdown-btn">1장 ▼</button>
+                            <div class="dropdown-content">
+                                <a href="chapter1.html">1장 소개</a>
+                                <a href="secret1.html">비결 1</a>
+                                <a href="secret2.html">비결 2</a>
+                                <a href="secret3.html">비결 3</a>
+                                <a href="secret4.html">비결 4</a>
+                                <a href="secret5.html">비결 5</a>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="nav-link dropdown-btn">2장 ▼</button>
+                            <div class="dropdown-content">
+                                <a href="chapter2.html">2장 소개</a>
+                                <a href="secret6.html">비결 6</a>
+                                <a href="secret7.html">비결 7</a>
+                                <a href="secret8.html">비결 8</a>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="nav-link dropdown-btn">3장 ▼</button>
+                            <div class="dropdown-content">
+                                <a href="chapter3.html">3장 소개</a>
+                                <a href="secret9.html">비결 9</a>
+                                <a href="secret10.html">비결 10</a>
+                                <a href="secret11.html">비결 11</a>
+                                <a href="secret12.html">비결 12</a>
+                                <a href="secret13.html">비결 13</a>
+                                <a href="secret14.html">비결 14</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="unified-mobile-menu-btn" aria-label="메뉴 열기" class="text-gray-500 hover:text-gray-600 p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Unified Mobile menu -->
+        <div id="unified-mobile-menu-dropdown" class="md:hidden hidden bg-white border-t shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block nav-link-mobile">홈</a>
+                <a href="about.html" class="block nav-link-mobile">학습법 소개</a>
+                <div>
+                    <a href="chapter1.html" class="block nav-link-mobile font-semibold">1장: 의미 찾기</a>
+                    <div class="pl-4">
+                        <a href="secret1.html" class="block nav-link-mobile text-sm">비결 1: 지시어</a>
+                        <a href="secret2.html" class="block nav-link-mobile text-sm">비결 2: 관련어</a>
+                        <a href="secret3.html" class="block nav-link-mobile text-sm">비결 3: 자리(1)</a>
+                        <a href="secret4.html" class="block nav-link-mobile text-sm">비결 4: 자리(2)</a>
+                        <a href="secret5.html" class="block nav-link-mobile text-sm">비결 5: 논리</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="chapter2.html" class="block nav-link-mobile font-semibold">2장: 쉽게 읽기</a>
+                     <div class="pl-4">
+                        <a href="secret6.html" class="block nav-link-mobile text-sm">비결 6: 변화</a>
+                        <a href="secret7.html" class="block nav-link-mobile text-sm">비결 7: 바꿔쓰기</a>
+                        <a href="secret8.html" class="block nav-link-mobile text-sm">비결 8: 다양성</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="chapter3.html" class="block nav-link-mobile font-semibold">3장: 빠르게 읽기</a>
+                    <div class="pl-4">
+                        <a href="secret9.html" class="block nav-link-mobile text-sm">비결 9: 화제</a>
+                        <a href="secret10.html" class="block nav-link-mobile text-sm">비결 10: 안내어</a>
+                        <a href="secret11.html" class="block nav-link-mobile text-sm">비결 11: 문맥의미</a>
+                        <a href="secret12.html" class="block nav-link-mobile text-sm">비결 12: 유형</a>
+                        <a href="secret13.html" class="block nav-link-mobile text-sm">비결 13: 예상</a>
+                        <a href="secret14.html" class="block nav-link-mobile text-sm">비결 14: 추리기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    김영로 영어 문맥 순해
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    단어 하나하나에 얽매이지 않고 글의 흐름을 읽는 힘,<br>
+                    문맥 순해로 키우세요.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="about.html" class="w-full sm:w-auto inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300 shadow-md">
+                        학습 시작하기
+                    </a>
+                    <a href="chapter1.html" class="w-full sm:w-auto inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                        1장부터 시작
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Sections -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    3단계 학습 과정
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Chapter 1 -->
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow">1</div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">의미 찾기</h3>
+                        </div>
+                        <h4 class="text-lg font-semibold text-red-700 mb-3">
+                            모르는 부분을 만나면 이렇게 의미를 찾아라
+                        </h4>
+                        <p class="text-gray-600 mb-4 text-sm flex-grow">
+                            지시어, 관련어, 자리 파악을 통한 체계적인 의미 추론 방법을 학습합니다. 막히는 부분 없이 글을 이해하는 첫걸음입니다.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="text-xs text-gray-500 uppercase font-semibold">포함된 비결:</div>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>비결 1: 지시어에 주목하라</li>
+                                <li>비결 2: 관련어를 생각하라</li>
+                                <li>비결 3: 자리를 살펴라(1): 대상=설명</li>
+                                <li>비결 4: 자리를 살펴라(2): 비교의 대상</li>
+                                <li>비결 5: 논리적인 접근방식</li>
+                            </ul>
+                        </div>
+                        <a href="chapter1.html" class="mt-auto inline-block bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition duration-300 font-semibold text-center">
+                            1장 학습하기
+                        </a>
+                    </div>
+
+                    <!-- Chapter 2 -->
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow">2</div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">쉽게 읽기</h3>
+                        </div>
+                        <h4 class="text-lg font-semibold text-green-700 mb-3">
+                            가장 어려운 부분을 가장 쉽게 읽는 법
+                        </h4>
+                        <p class="text-gray-600 mb-4 text-sm flex-grow">
+                            영어의 변화와 바꿔쓰기 패턴을 이해하여 복잡한 문장을 단순화하고, 어려운 표현도 쉽게 풀어내는 방법을 배웁니다.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="text-xs text-gray-500 uppercase font-semibold">포함된 비결:</div>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>비결 6: 영어는 변화를 좋아한다</li>
+                                <li>비결 7: 바꿔쓰기에 관한 모든 것</li>
+                                <li>비결 8: 영어 표현의 다양성</li>
+                            </ul>
+                        </div>
+                        <a href="chapter2.html" class="mt-auto inline-block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300 font-semibold text-center">
+                            2장 학습하기
+                        </a>
+                    </div>
+
+                    <!-- Chapter 3 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow">3</div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">빠르게 읽기</h3>
+                        </div>
+                        <h4 class="text-lg font-semibold text-blue-700 mb-3">
+                            이렇게 읽으면 빠르게 읽을 수 있다
+                        </h4>
+                        <p class="text-gray-600 mb-4 text-sm flex-grow">
+                            화제, 안내어, 문맥의미를 활용한 효율적인 독해 전략을 습득하여, 시간은 줄이고 이해도는 높이는 기술을 익힙니다.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                             <div class="text-xs text-gray-500 uppercase font-semibold">포함된 비결:</div>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>비결 9: 화제를 찾아라</li>
+                                <li>비결 10: 안내어에 주목하라</li>
+                                <li>비결 11: 문맥의미를 읽어라</li>
+                                <li>비결 12: 유형을 읽어라</li>
+                                <li>비결 13: 예상을 읽어라</li>
+                                <li>비결 14: 추려서 읽어라</li>
+                            </ul>
+                        </div>
+                        <a href="chapter3.html" class="mt-auto inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 font-semibold text-center">
+                            3장 학습하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    인터랙티브 학습 도구
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-md">
+                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">실시간 피드백</h3>
+                        <p class="text-gray-600 text-sm">학습 과정에서 즉시 확인할 수 있는 정답과 상세 해설, 힌트 제공</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-md">
+                            <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3.5m0 0V11"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">다양한 연습 유형</h3>
+                        <p class="text-gray-600 text-sm">선택, 연결, 빈칸 채우기 등 직관적 상호작용으로 개념 체화</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-md">
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">단계별 연습</h3>
+                        <p class="text-gray-600 text-sm">체계적이고 점진적인 학습 과정으로 실력 향상</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-md">
+                           <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">학습 성과 확인</h3>
+                        <p class="text-gray-600 text-sm">연습 문제 완료 후 정답 수, 진행도 등 성취도 확인</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">김영로 영어 문맥 순해</h3>
+                    <p class="text-gray-400 text-sm">
+                        체계적인 문맥 독해법으로 영어 실력을 한 단계 끌어올리세요. 이 웹사이트는 여러분의 효과적인 학습을 지원합니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">바로가기</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">홈</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">학습법 소개</a></li>
+                        <li><a href="chapter1.html" class="text-gray-400 hover:text-white transition">1장: 의미 찾기</a></li>
+                        <li><a href="chapter2.html" class="text-gray-400 hover:text-white transition">2장: 쉽게 읽기</a></li>
+                        <li><a href="chapter3.html" class="text-gray-400 hover:text-white transition">3장: 빠르게 읽기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">문의</h4>
+                     <p class="text-gray-400 text-sm">
+                        학습 관련 문의사항이나 웹사이트 개선 제안이 있으시면 언제든지 연락주세요.
+                    </p>
+                    <a href="mailto:contact@example.com" class="text-indigo-400 hover:text-indigo-300 transition text-sm mt-2 inline-block">contact@example.com</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 김영로 영어 문맥 순해. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/nav_handler.js"></script>
+    <!-- Specific page scripts will be loaded by individual pages if needed -->
+</body>
+</html>

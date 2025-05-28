@@ -1,0 +1,137 @@
+/* Tailwind Base and Utilities will be applied via CDN */
+
+/* Custom Styles */
+body {
+    font-family: 'Inter', sans-serif; /* Example: Using Inter font if available, falls back to sans-serif */
+    @apply antialiased;
+}
+
+/* Navigation styles */
+.nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors;
+}
+.nav-link.active {
+    @apply bg-indigo-100 text-indigo-700 font-semibold;
+}
+.dropdown-btn.active { /* For chapter buttons */
+     @apply bg-indigo-500 text-white; /* Example stronger active style for main chapter button */
+}
+.dropdown-btn.active:hover {
+    @apply bg-indigo-600 text-white;
+}
+
+.dropdown-content {
+    @apply hidden absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 z-50;
+    transform-origin: top left;
+    animation: fadeIn 0.2s ease-out;
+}
+.dropdown-content.show {
+    @apply block;
+}
+.dropdown-content a {
+    @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900;
+}
+.dropdown-content a.active {
+    @apply bg-indigo-100 text-indigo-700 font-semibold;
+}
+
+/* Mobile Navigation */
+.nav-link-mobile {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900;
+}
+.nav-link-mobile.active {
+     @apply bg-indigo-100 text-indigo-700;
+}
+/* Ensure mobile menu dropdown has enough z-index if it overlaps other fixed elements */
+#unified-mobile-menu-dropdown {
+    z-index: 40; /* Lower than nav, but higher than page content */
+}
+
+
+/* Prose Customizations (if needed, Tailwind Typography plugin handles most) */
+.prose h1 { @apply text-4xl font-bold mb-4; }
+.prose h2 { @apply text-2xl font-bold mt-8 mb-4; }
+.prose h3 { @apply text-xl font-semibold mt-6 mb-3; }
+.prose p { @apply mb-4 leading-relaxed; }
+.prose ul { @apply list-disc list-inside mb-4; }
+.prose li { @apply mb-1; }
+.prose a { @apply text-indigo-600 hover:text-indigo-800 hover:underline; }
+.prose code { @apply bg-gray-100 text-sm px-1.5 py-0.5 rounded-md font-mono text-red-600; }
+
+
+/* Specific interactive element styles (examples) */
+.clickable-word-s9 {
+    @apply cursor-pointer inline-block p-0.5 m-0.5 hover:bg-blue-100 rounded transition-colors;
+}
+.selected-correct-s9 {
+    @apply bg-blue-200 ring-2 ring-blue-500 text-blue-700 rounded;
+}
+.selected-incorrect-s9 {
+    @apply bg-red-100 text-red-700 line-through rounded;
+}
+
+.clickable-sentence-s14 {
+    @apply border border-transparent hover:border-blue-300 transition-all;
+}
+.selected-main-s14 {
+    @apply bg-green-100 text-green-700 ring-1 ring-green-400 rounded font-semibold;
+}
+.selected-wrong-s14 {
+    @apply bg-red-100 text-red-700 ring-1 ring-red-400 rounded line-through;
+}
+.missed-correct-s14 {
+    @apply bg-yellow-100 text-yellow-700 border border-yellow-400 rounded;
+}
+.selected-temp-s14 { /* For S14 before submission */
+    @apply bg-blue-100 ring-2 ring-blue-400;
+}
+
+
+/* Flowchart SVG specific styles */
+.flowchart-step-svg rect {
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.flowchart-step-svg:hover rect {
+    /* filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.2)); */ /* Alternative shadow */
+    opacity: 0.85;
+}
+.flowchart-step-svg text {
+    user-select: none; /* Prevent text selection on click */
+}
+
+/* Feedback and Score Areas */
+.feedback-area { /* Base class for consistent styling if needed */
+    min-height: 1.25em; /* Prevents layout shift when text appears */
+}
+.score-area {
+    min-height: 1em;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Styling for phrase blanks in S13 */
+.phrase-blank-s13 {
+    display: inline-block;
+    border-bottom: 2px dashed #9ca3af; /* Tailwind gray-400 */
+    padding: 0.25rem 0.5rem;
+    min-width: 120px; /* Ensure some space */
+    text-align: center;
+    background-color: #f3f4f6; /* Tailwind gray-100 */
+    color: #4b5563; /* Tailwind gray-600 */
+    font-style: italic;
+}
+.phrase-blank-s13.text-green-600 { /* Correctly filled */
+    background-color: #d1fae5; /* Tailwind green-100 */
+    border-color: #34d399; /* Tailwind green-400 */
+    font-style: normal;
+}
+.phrase-blank-s13.text-red-600 { /* Incorrectly filled */
+    background-color: #fee2e2; /* Tailwind red-100 */
+    border-color: #f87171; /* Tailwind red-400 */
+    font-style: normal;
+}
+
